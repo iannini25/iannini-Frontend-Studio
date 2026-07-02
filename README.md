@@ -37,8 +37,22 @@ de componentes) para entregar algo de estúdio.
 Sem build, sem config. A descoberta é automática: skills em `.claude/skills/<nome>/SKILL.md`,
 agentes em `.claude/agents/<nome>.md`.
 
-> Requer Node.js para alguns prompts (`npx skills`, `npx impeccable`, clones) e Python +
-> `fonttools` para o sistema de fontes. São passos opcionais/pontuais.
+---
+
+## Dependências
+
+**O kit em si não precisa de instalação** — skills e agentes são markdown que o Claude
+Code lê direto. As dependências abaixo são para os fluxos opcionais:
+
+| Ferramenta | Para quê | Quando |
+|---|---|---|
+| **Python 3.10+** + `pip install -r requirements.txt` | `fonttools` + `brotli`: inspeção das suas fontes e conversão WOFF2 (`prompts/02`, skill `fonts-system`). Os scripts da `ui-ux-pro-max` usam só a stdlib. | Uma vez, antes do `prompts/02`. |
+| **Node.js 18+** | `npx skills` (reinstalar skills do lock), `npx impeccable` (CLI de polish), `npx shadcn`/`npx lightswind` (puxar componentes do catálogo). Nada para instalar antes — o `npx` baixa sob demanda. | Sob demanda. |
+| **git** | Clonar os repos de referência do `prompts/03`. | Só no `prompts/03`. |
+| **ffmpeg** *(opcional)* | Fatiar vídeo em frames para scroll-vídeo (skill `scroll-cinematic`). | Só se fizer herói com scroll-vídeo. |
+
+Nos sites gerados, GSAP/Lenis entram via CDN e o anime.js já vem vendorado em
+`vendor/anime/` — nenhum `npm install` obrigatório.
 
 ---
 
@@ -70,6 +84,8 @@ Exemplo mínimo do que dizer:
 | `.claude/agents/` | design-director, anime-motion, clean-code-reviewer. |
 | `vendor/anime/` | anime.js v4.4.1 (ground truth da skill `animejs`). |
 | `skills-lock.json` | Rastreia as skills vindas do GitHub (CLI `npx skills`). |
+| `requirements.txt` | Dependências Python do pipeline de fontes (`fonttools`, `brotli`). |
+| `showcase/` | Demo viva do kit: uma página, quatro linguagens (rode um servidor local e abra). |
 
 ---
 
