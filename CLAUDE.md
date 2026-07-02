@@ -65,7 +65,7 @@ frontend-studio/
 ├── fonts-manifest.json    ← manifest das suas fontes locais (saída do prompts/02; fora do git)
 ├── fonts-woff2/           ← suas fontes convertidas p/ web (prompts/02; fora do git)
 └── .claude/
-    ├── skills/           ← 25 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
+    ├── skills/           ← 26 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
     └── agents/           ← agentes (6: director, scroll, motion, critic, copy, code)
 ```
 
@@ -100,6 +100,10 @@ DrawSVG, MorphSVG, ScrollSmoother).
 de uso, dos bancos open-source (React Bits, Cult UI, Lightswind, ShaderGradient, shadcn):
 qual lib tem o quê, nome real do componente, comando real de instalação, e o protocolo de
 adaptação (nunca colar cru).
+
+**Copy de conversão (NOVO):** `conversion-copywriting` — sistema de persuasão
+(Schwartz/Halbert/Ogilvy/Georgi/Sutherland/Godin/Kotler + escola brasileira:
+Olivetto, Silvio Santos, Hugo Veiga); o agente `copy-chief` executa.
 
 **Processo/QA:** `impeccable` (motor de craft/crítica/polish, tem CLI própria) ·
 `redesign-existing-projects` (auditar e elevar) · `full-output-enforcement` (anti-truncamento) ·

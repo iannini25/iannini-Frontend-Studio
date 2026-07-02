@@ -73,7 +73,7 @@ Conhec.:  ui-ux-pro-max (paleta de alto contraste) · FONTES.md "Marketing"
 Estrutura: AIDA (Atenção/Hero → Interesse/Bento → Desejo/GSAP → Ação/CTA+preço)
 Build:    gpt-taste (hero 2-3 linhas, bento denso, CTAs duplos, marquee de prova social)
 Motion:   scroll-cinematic (text-reveal scrub, pin, card stacking) + anime-motion (contadores)
-Copy:     copy-chief (agente) — neuromarketing (prova social, autoridade, escassez real, redução de objeção)
+Copy:     agente copy-chief + skill conversion-copywriting (diagnóstico de consciência/sofisticação, mecanismo nomeado, blueprint seção a seção)
 Polish:   impeccable · full-output-enforcement (página inteira, todas as seções)
 ```
 

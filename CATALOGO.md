@@ -44,6 +44,11 @@ Todas em `.claude/skills/<nome>/SKILL.md`. Descoberta automática pelo Claude Co
 |---|---|---|
 | **fonts-system** *(novo)* | Onde ficam suas fontes locais por SO, inspeção com fonttools, conversão WOFF2, `@font-face` (referenciado/base64), curadoria por estilo. | Sempre que escolher/aplicar tipografia ou usar suas fontes baixadas. |
 
+### Copy de conversão (novo)
+| Skill | O que é | Quando usar |
+|---|---|---|
+| **conversion-copywriting** *(novo)* | Sistema de persuasão do estúdio: Schwartz (consciência/sofisticação), Halbert+Georgi (fome/RMBC/mecanismo), Ogilvy (headlines/fatos), Sutherland (psico-lógica/microcopy), Godin+Kotler (posicionamento), escola brasileira (voz). 7 referências + blueprint seção a seção + ponte nicho→fonte/paleta/posição. | Toda copy de venda/conversão: headline, oferta, prova, objeções, FAQ, CTA. O agente `copy-chief` executa. |
+
 ### Conhecimento / base de dados
 | Skill | O que é | Quando usar |
 |---|---|---|
@@ -79,7 +84,7 @@ Em `.claude/agents/<nome>.md`. Agentes orquestram skills.
 | **anime-motion** | Especialista em motion com anime.js v4. Lê a skill `animejs` + referências + o source em `vendor/anime/`. | Delegar qualquer "animar X" por código JS. |
 | **scroll-director** *(novo)* | Especialista na stack GSAP/ScrollTrigger/SplitText/Lenis (skill `scroll-cinematic`). Espelho do anime-motion para a região do scroll. | Delegar qualquer efeito dirigido pela rolagem: scroll-vídeo, pin, parallax, scrub, text-reveal. |
 | **design-critic** *(novo)* | Crítico/QA adversarial: varre o build contra o checklist da skill de estilo + anti-slop + SISTEMA.md §6, computa contraste WCAG de verdade, reporta achado→arquivo:linha→fix. Executor da `impeccable`. | **Antes de dar qualquer página como pronta.** E em "revise/critique o design". |
-| **copy-chief** *(novo)* | Chefe de copy PT-BR: AIDA, headline curta, um pedido por página, zero clichê de IA, dado real ou hipótese rotulada. | Escrever/revisar qualquer texto visível (headline, CTA, seção, prova social, microcopy). |
+| **copy-chief** *(novo)* | Chefe de copy PT-BR. Executa a skill `conversion-copywriting`: diagnóstico Schwartz (consciência/sofisticação), identificação de nicho, mineração de reviews, mecanismo nomeado, blueprint seção a seção, proposta de forma (fonte/paleta/posição). Zero clichê de IA, dado real ou hipótese rotulada. | Escrever/revisar qualquer texto visível e montar a copy inteira de landing de vendas. |
 | **clean-code-reviewer** | Guardião da qualidade de código (skill `clean-code`). Revisa por heurísticas (G/F/N), refatora em passos pequenos. | Revisar diffs/PRs, refatorar, escrever código no padrão. |
 
 ---

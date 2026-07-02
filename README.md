@@ -12,7 +12,7 @@ de componentes) para entregar algo de estúdio.
 
 ## O que tem dentro
 
-- **25 skills** de design, motion, tipografia, componentes prontos, código e geração de imagem.
+- **26 skills** de design, motion, tipografia, copy de conversão, componentes prontos, código e geração de imagem.
 - **6 agentes** que trabalham em conjunto (orquestrador, scroll, motion, crítica de design, copy e qualidade de código).
 - **74 `DESIGN.md`** de marcas de ponta (Apple, Stripe, Linear, Vercel, Ferrari, Nike…).
 - **Roteador** que escolhe a combinação certa de skills por tipo de projeto.
@@ -80,7 +80,7 @@ Exemplo mínimo do que dizer:
 | `CATALOGO.md` | Inventário completo: skills, agentes, 74 marcas, fontes externas de componentes. |
 | `FONTES.md` | Onde ficam suas fontes por SO + biblioteca curada por estilo. |
 | `prompts/` | Prompts prontos p/ o Claude Code (setup e kickoff). |
-| `.claude/skills/` | As 25 skills (+ pack de 74 marcas). |
+| `.claude/skills/` | As 26 skills (+ pack de 74 marcas). |
 | `.claude/agents/` | Os 6 agentes: design-director, scroll-director, anime-motion, design-critic, copy-chief, clean-code-reviewer. |
 | `vendor/anime/` | anime.js v4.4.1 (ground truth da skill `animejs`). |
 | `skills-lock.json` | Rastreia as skills vindas do GitHub (CLI `npx skills`). |
