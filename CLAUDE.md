@@ -1,0 +1,159 @@
+# CLAUDE.md — Frontend Studio Kit
+
+> Biblioteca reutilizável de **skills + agentes** para gerar sites e interfaces
+> **acima do padrão** com o Claude Code dentro do VS Code. Abra esta pasta como
+> raiz do projeto (ou copie `.claude/` para dentro dele) e o Claude Code descobre
+> tudo sozinho.
+
+Este arquivo é o **manual de operação**. Leia `SISTEMA.md` para o roteador
+(qual skill/agente usar em cada tipo de projeto) e `CATALOGO.md` para o inventário
+completo. Fontes: `FONTES.md`. Automação/terminal: pasta `prompts/`.
+
+---
+
+## 0. Regra-zero: nada de layout genérico
+
+Este kit existe por um motivo: **o resultado padrão de um LLM é "página de IA"** —
+Inter/Roboto como display, ícones Lucide grossos, gradiente roxo, cards com borda
+colorida à esquerda, hero de 6 linhas, bento com buracos, botão com texto invisível.
+Tudo aqui é para **quebrar esses defaults**. Se um output pareceria igual ao de
+qualquer outro prompt, ele está errado — recomece pela direção de design.
+
+---
+
+## 1. Como o Claude Code deve trabalhar (fluxo padrão)
+
+Quando o usuário pedir um site/página/componente, **não saia codando**. Siga:
+
+1. **Direção primeiro.** Rode o agente `design-director` (`.claude/agents/design-director.md`).
+   Ele lê o brief, define a direção (público, trabalho da página, arquétipo visual,
+   par de fontes, elemento-assinatura) e escolhe **quais skills combinar**.
+2. **Estrutura.** Liste seções e o que cada uma comunica. Decida quais têm
+   "momento cinematográfico" (1–2 no máximo).
+3. **Build.** Escreva o código já puxando as skills de taste da direção escolhida
+   (ver `SISTEMA.md`). Fontes via `fonts-system` / `FONTES.md`. Ícones conforme a
+   regra de ícones do projeto (§4).
+4. **Motion.** Animação orquestrada por código → agente `anime-motion` (anime.js) ou
+   skill `scroll-cinematic` (GSAP/ScrollTrigger/Lenis/scroll-vídeo). Nunca anime o
+   mesmo elemento por dois sistemas.
+5. **Polish + QA.** Rode a skill `impeccable` e/ou `redesign-existing-projects` para
+   crítica e refino. Passe o checklist da skill de estilo usada. Código passa por
+   `clean-code` (+ agente `clean-code-reviewer`).
+6. **Completude.** `full-output-enforcement` está sempre ativa: entregue arquivos
+   inteiros, sem `// ...`, sem "resto segue o padrão".
+
+> Regra prática: **direção → estrutura → build → motion → polish → QA.**
+
+---
+
+## 2. Estrutura do pacote
+
+```
+frontend-studio/
+├── CLAUDE.md              ← este arquivo (manual de operação)
+├── SISTEMA.md             ← roteador: qual skill/agente por tipo de projeto + receitas
+├── CATALOGO.md            ← inventário completo (skills, agentes, 74 marcas, fontes externas)
+├── FONTES.md              ← onde ficam suas fontes locais por SO + biblioteca curada
+├── README.md              ← como instalar/usar no VS Code
+├── prompts/               ← prompts prontos para o Claude Code executar no terminal
+├── vendor/anime/          ← anime.js v4.4.1 (ground truth da skill animejs; src + bundles)
+├── components-catalog.md  ← catálogo de componentes externos (saída do prompts/03)
+├── _ref/                  ← clones de referência dos repos de componentes (prompts/03; fora do git)
+├── showcase/              ← demo viva do kit ("um kit, quatro linguagens")
+├── fonts-manifest.json    ← manifest das suas fontes locais (saída do prompts/02; fora do git)
+├── fonts-woff2/           ← suas fontes convertidas p/ web (prompts/02; fora do git)
+└── .claude/
+    ├── skills/           ← 25 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
+    └── agents/           ← agentes (design-director, anime-motion, clean-code-reviewer)
+```
+
+**Descoberta:** o Claude Code lê skills em `.claude/skills/<nome>/SKILL.md` e agentes
+em `.claude/agents/<nome>.md`. É só isto — sem build, sem config.
+
+**Opcional (convenção agentskills.io):** se quiser a estrutura canônica
+`.agents/skills/` + symlinks, rode `prompts/05-espelhar-agents-convention.md`. **Não faça
+isso num repo que vai para o GitHub** — junctions/symlinks não sobrevivem a clone/zip;
+a fonte única em `.claude/skills/` é o formato de distribuição.
+
+---
+
+## 3. Skills instaladas (resumo — detalhe em CATALOGO.md)
+
+**Direção de design / "taste" (o núcleo):**
+`design-taste-frontend` (flagship anti-slop) · `design-taste-frontend-v1` (compat) ·
+`high-end-visual-design` ($150k agency, Double-Bezel) · `gpt-taste` (Awwwards + GSAP,
+AIDA, bento sem buraco) · `emil-design-eng` (polish/interação, Emil Kowalski) ·
+`stitch-design-taste` (gera DESIGN.md).
+
+**Estilos específicos:** `minimalist-ui` (editorial mono quente) ·
+`industrial-brutalist-ui` (brutalista).
+
+**Scroll cinematográfico (NOVO):** `scroll-cinematic` — GSAP + ScrollTrigger + Lenis +
+scroll-vídeo em canvas + pipeline Higgsfield + plugins GSAP agora grátis (SplitText,
+DrawSVG, MorphSVG, ScrollSmoother).
+
+**Fontes (NOVO):** `fonts-system` — usa suas fontes locais e monta `@font-face`.
+
+**Componentes prontos (NOVO):** `component-libraries` — catálogo real, indexado por caso
+de uso, dos bancos open-source (React Bits, Cult UI, Lightswind, ShaderGradient, shadcn):
+qual lib tem o quê, nome real do componente, comando real de instalação, e o protocolo de
+adaptação (nunca colar cru).
+
+**Processo/QA:** `impeccable` (motor de craft/crítica/polish, tem CLI própria) ·
+`redesign-existing-projects` (auditar e elevar) · `full-output-enforcement` (anti-truncamento) ·
+`ui-ux-pro-max` (base de dados pesquisável: 67 estilos, 96 paletas, 57 pares de fonte) ·
+`image-to-code` (design→código a partir de imagem).
+
+**Geração de imagem:** `brandkit` (boards de marca/logo) · `imagegen-frontend-web`
+(1 imagem por seção) · `imagegen-frontend-mobile` (telas de app).
+
+**Código/animação:** `clean-code` (padrão Código Limpo) · `animejs` (referência v4.4.1) ·
+`iconsax-icons` · `jitter-motion` · `svgator-animations`.
+
+**Pack de dados:** `awesome-design-md/design-md/` — 74 DESIGN.md de marcas de ponta
+(Apple, Stripe, Linear, Vercel, Ferrari, Nike, Framer, Notion, Tesla, SpaceX, Spotify…).
+Copie o DESIGN.md de uma marca para o projeto e peça "faça uma página nesta linguagem".
+
+**Agentes:** `design-director` (orquestrador — NOVO) · `anime-motion` (motion anime.js) ·
+`clean-code-reviewer` (qualidade de código).
+
+---
+
+## 4. Regras duras (configuráveis por projeto)
+
+Estas regras são **opt-in por projeto** — o kit é genérico. Ative o que fizer sentido
+no `CLAUDE.md` do projeto específico. Padrões recomendados:
+
+- **Ícones.** Escolha UMA fonte de ícones por projeto e mantenha (nunca misture). Opções
+  boas: Phosphor (Light/Bold), Iconsax (use a skill `iconsax-icons`), Lucide **fino** só se
+  o estilo pedir. **Nunca emoji** como ícone de UI. As skills de taste **banem Lucide
+  grosso, FontAwesome e Material** por padrão.
+- **Fontes.** **Nunca** Inter/Roboto/Arial/Open Sans como display. Use `fonts-system` +
+  `FONTES.md`. (Regra herdada de todas as skills de taste.)
+- **Qualidade de código.** Todo código passa por `clean-code`; antes de dar um módulo como
+  pronto, varra `.claude/skills/clean-code/reference/odores.md`.
+- **Animação — qual sistema:** ícone Lottie → `iconsax-icons`; vetorial exportado do
+  SVGator → `svgator-animations`; vídeo/motion do Jitter → `jitter-motion`; orquestração
+  por código (DOM/scroll/timeline) → `animejs`/agente `anime-motion`; scroll-vídeo,
+  pin, parallax, smooth scroll → `scroll-cinematic`. **Nunca dois sistemas no mesmo
+  elemento** (conflito de transform).
+- **Performance:** só anime `transform`/`opacity`; `backdrop-blur` só em fixed/sticky;
+  respeite sempre `prefers-reduced-motion`.
+
+---
+
+## 5. skills-lock.json
+
+`skills-lock.json` (raiz) rastreia as skills que vieram do GitHub via `npx skills`.
+Serve para reinstalar/atualizar. Skills locais/próprias (`animejs`, `clean-code`,
+`iconsax-icons`, `jitter-motion`, `svgator-animations`, `scroll-cinematic`,
+`fonts-system`) **não** entram no lock. Para reinstalar tudo do zero num projeto novo:
+`prompts/01-instalar-skills-github.md`.
+
+---
+
+## 6. Iniciar um projeto novo
+
+Copie esta pasta como raiz (ou só `.claude/` + os `.md` de topo) e comece com o prompt
+`prompts/04-novo-projeto.md`, preenchendo: tipo de site, negócio/segmento, público,
+tom e referências. O `design-director` faz o resto.

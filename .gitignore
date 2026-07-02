@@ -1,0 +1,17 @@
+# ── Clones de referência de componentes (PARTE A do prompts/03) ──
+# Reclonáveis com prompts/03-catalogar-componentes-externos.md.
+# Versione apenas components-catalog.md, não os clones.
+_ref/
+
+# ── Fontes pessoais (saída do prompts/02) ──
+# NÃO versionar: são as fontes do SEU disco, várias comerciais/licenciadas
+# (Neue Haas, Druk, Helvetica…) — publicá-las violaria as licenças.
+# Cada usuário gera as suas rodando prompts/02-ingerir-minhas-fontes.md.
+fonts-woff2/
+fonts-manifest.json
+specimen.html
+showcase/fonts/
+
+# ── SO / editor ──
+.DS_Store
+Thumbs.db
