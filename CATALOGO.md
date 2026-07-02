@@ -75,8 +75,11 @@ Em `.claude/agents/<nome>.md`. Agentes orquestram skills.
 
 | Agente | Papel | Quando usar |
 |---|---|---|
-| **design-director** *(novo)* | Orquestrador. Lê o brief, define direção (público/arquétipo/fontes/assinatura), escolhe as skills e conduz as 5 camadas (direção→estrutura→build→motion→polish→QA). | **No início de todo projeto de site/página.** É o ponto de entrada. |
+| **design-director** | Orquestrador. Lê o brief, define direção (público/arquétipo/fontes/assinatura), escolhe as skills e conduz as 5 camadas (direção→estrutura→build→motion→polish→QA). | **No início de todo projeto de site/página.** É o ponto de entrada. |
 | **anime-motion** | Especialista em motion com anime.js v4. Lê a skill `animejs` + referências + o source em `vendor/anime/`. | Delegar qualquer "animar X" por código JS. |
+| **scroll-director** *(novo)* | Especialista na stack GSAP/ScrollTrigger/SplitText/Lenis (skill `scroll-cinematic`). Espelho do anime-motion para a região do scroll. | Delegar qualquer efeito dirigido pela rolagem: scroll-vídeo, pin, parallax, scrub, text-reveal. |
+| **design-critic** *(novo)* | Crítico/QA adversarial: varre o build contra o checklist da skill de estilo + anti-slop + SISTEMA.md §6, computa contraste WCAG de verdade, reporta achado→arquivo:linha→fix. Executor da `impeccable`. | **Antes de dar qualquer página como pronta.** E em "revise/critique o design". |
+| **copy-chief** *(novo)* | Chefe de copy PT-BR: AIDA, headline curta, um pedido por página, zero clichê de IA, dado real ou hipótese rotulada. | Escrever/revisar qualquer texto visível (headline, CTA, seção, prova social, microcopy). |
 | **clean-code-reviewer** | Guardião da qualidade de código (skill `clean-code`). Revisa por heurísticas (G/F/N), refatora em passos pequenos. | Revisar diffs/PRs, refatorar, escrever código no padrão. |
 
 ---

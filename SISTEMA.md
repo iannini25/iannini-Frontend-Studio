@@ -15,8 +15,8 @@ O estúdio tem **5 camadas**. Um bom site passa por todas, nesta ordem:
 | **1. Direção** | público, arquétipo visual, fontes, assinatura | `design-director` (agente) → escolhe UMA skill de estilo |
 | **2. Conhecimento** | paletas, pares de fonte, padrões, referência de marca | `ui-ux-pro-max`, `awesome-design-md` (74 marcas), `FONTES.md` |
 | **3. Build** | o código em si | skill de estilo escolhida + `image-to-code` (se partir de imagem) |
-| **4. Motion** | animação | `scroll-cinematic` (scroll/GSAP) · `anime-motion`/`animejs` (código) · `jitter/svgator/iconsax` (assets) |
-| **5. Polish + QA** | craft, crítica, código limpo, completude | `impeccable`, `redesign-existing-projects`, `clean-code`+`clean-code-reviewer`, `full-output-enforcement` |
+| **4. Motion** | animação | `scroll-director`/`scroll-cinematic` (scroll/GSAP) · `anime-motion`/`animejs` (código) · `jitter/svgator/iconsax` (assets) |
+| **5. Polish + QA** | craft, crítica, código limpo, completude | `design-critic` (executa `impeccable`), `copy-chief` (textos), `redesign-existing-projects`, `clean-code`+`clean-code-reviewer`, `full-output-enforcement` |
 
 **Sempre ativas (transversais):** `full-output-enforcement` (nunca truncar) e
 `clean-code` (todo código).
@@ -73,7 +73,7 @@ Conhec.:  ui-ux-pro-max (paleta de alto contraste) · FONTES.md "Marketing"
 Estrutura: AIDA (Atenção/Hero → Interesse/Bento → Desejo/GSAP → Ação/CTA+preço)
 Build:    gpt-taste (hero 2-3 linhas, bento denso, CTAs duplos, marquee de prova social)
 Motion:   scroll-cinematic (text-reveal scrub, pin, card stacking) + anime-motion (contadores)
-Copy:     princípios de neuromarketing (prova social, autoridade, escassez real, redução de objeção)
+Copy:     copy-chief (agente) — neuromarketing (prova social, autoridade, escassez real, redução de objeção)
 Polish:   impeccable · full-output-enforcement (página inteira, todas as seções)
 ```
 

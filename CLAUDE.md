@@ -33,12 +33,14 @@ Quando o usuário pedir um site/página/componente, **não saia codando**. Siga:
 3. **Build.** Escreva o código já puxando as skills de taste da direção escolhida
    (ver `SISTEMA.md`). Fontes via `fonts-system` / `FONTES.md`. Ícones conforme a
    regra de ícones do projeto (§4).
-4. **Motion.** Animação orquestrada por código → agente `anime-motion` (anime.js) ou
+4. **Motion.** Animação orquestrada por código → agente `anime-motion` (anime.js);
+   scroll-driven → agente `scroll-director` (GSAP/ScrollTrigger/Lenis) ou
    skill `scroll-cinematic` (GSAP/ScrollTrigger/Lenis/scroll-vídeo). Nunca anime o
    mesmo elemento por dois sistemas.
-5. **Polish + QA.** Rode a skill `impeccable` e/ou `redesign-existing-projects` para
-   crítica e refino. Passe o checklist da skill de estilo usada. Código passa por
-   `clean-code` (+ agente `clean-code-reviewer`).
+5. **Polish + QA.** Rode o agente `design-critic` (executa `impeccable` + checklist da
+   skill de estilo + contraste WCAG) e/ou `redesign-existing-projects`. Textos visíveis
+   passam pelo agente `copy-chief`. Código passa por `clean-code` (+ agente
+   `clean-code-reviewer`).
 6. **Completude.** `full-output-enforcement` está sempre ativa: entregue arquivos
    inteiros, sem `// ...`, sem "resto segue o padrão".
 
@@ -64,7 +66,7 @@ frontend-studio/
 ├── fonts-woff2/           ← suas fontes convertidas p/ web (prompts/02; fora do git)
 └── .claude/
     ├── skills/           ← 25 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
-    └── agents/           ← agentes (design-director, anime-motion, clean-code-reviewer)
+    └── agents/           ← agentes (6: director, scroll, motion, critic, copy, code)
 ```
 
 **Descoberta:** o Claude Code lê skills em `.claude/skills/<nome>/SKILL.md` e agentes
@@ -115,7 +117,7 @@ adaptação (nunca colar cru).
 Copie o DESIGN.md de uma marca para o projeto e peça "faça uma página nesta linguagem".
 
 **Agentes:** `design-director` (orquestrador — NOVO) · `anime-motion` (motion anime.js) ·
-`clean-code-reviewer` (qualidade de código).
+`clean-code-reviewer` (qualidade de código) · `scroll-director` (GSAP/scroll — NOVO) · `design-critic` (QA adversarial — NOVO) · `copy-chief` (copy PT-BR — NOVO).
 
 ---
 
