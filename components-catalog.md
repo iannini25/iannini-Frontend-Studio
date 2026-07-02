@@ -27,7 +27,7 @@
 | **shadergradient** | `_ref/shadergradient/` | 87M | React · `three`+`@react-three/fiber` · pacote npm | `npm i @shadergradient/react @react-three/fiber three` |
 | **watermelon** | `_ref/watermelon/` | 20M | React 19 · Vite · TS · Tailwind 4 · `motion` · registry shadcn | `npx shadcn@latest add https://registry.watermelon.sh/r/<nome>.json` |
 
-> `awesome-design-md` (73 marcas) já vem vendorado no kit em
+> `awesome-design-md` (74 marcas) já vem vendorado no kit em
 > `.claude/skills/awesome-design-md/design-md/` — ver `CATALOGO.md` §3.
 
 **PARTE B** — registries instaláveis (comandos anotados, **não** instalados) — ver §16.
@@ -414,7 +414,7 @@ Seções inteiras, prop-driven. Ótimo esqueleto de conversão — troque copy/d
 | **Lukacho UI** | `ui.lukacho.com` | `/components` · `/templates` | Copie e adapte. |
 | **Sprint** | `sprrrint.com` | Library (`/whats-new`) | Referência de componentes. |
 | **animmasterlib** | `animmasterlib.dev` | Componentes estilo **Awwwards** | Plano PRO barato (o usuário topa pagar se valer). Se assinar, baixar via método da doc e catalogar. |
-| **Refero** | `styles.refero.design` | `/ai-agents/design-md-examples` · `/ai-agents/design-prompts` | Exemplos DESIGN.md + prompts de design. Complementa o pack de 73 marcas. |
+| **Refero** | `styles.refero.design` | `/ai-agents/design-md-examples` · `/ai-agents/design-prompts` | Exemplos DESIGN.md + prompts de design. Complementa o pack de 74 marcas. |
 
 ---
 

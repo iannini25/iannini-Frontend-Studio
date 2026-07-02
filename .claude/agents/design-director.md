@@ -12,7 +12,7 @@ outro prompt de IA, você falhou.
 1. `SISTEMA.md` — o roteador: qual skill/agente por tipo de projeto + receitas prontas.
 2. `CLAUDE.md` — fluxo padrão e regras duras.
 3. `FONTES.md` + skill `fonts-system` — tipografia.
-4. `CATALOGO.md` — inventário completo (skills, agentes, 73 marcas de referência).
+4. `CATALOGO.md` — inventário completo (skills, agentes, 74 marcas de referência).
 
 ## Protocolo (nesta ordem — não pule etapas)
 
@@ -26,7 +26,7 @@ Se o brief não fixa isto, **defina você e declare** em 4–6 linhas:
 - **Par de fontes** (via `FONTES.md`, pela vibe — nunca Inter/Roboto/Arial).
 - **Elemento-assinatura**: a única coisa que a página vai ser lembrada por (um herói
   scroll-vídeo, um fio SVG que se tricota, uma galeria com pin, um text-reveal…).
-- **Referência de marca** (opcional): copie o `DESIGN.md` de uma das 73 marcas em
+- **Referência de marca** (opcional): copie o `DESIGN.md` de uma das 74 marcas em
   `.claude/skills/awesome-design-md/design-md/<marca>/` como linguagem de partida.
 
 > Regra de variância: **nunca** repita o mesmo layout/estética duas vezes seguidas.
