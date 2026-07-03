@@ -21,7 +21,18 @@ mais úteis (nome, o que faz, dependências, caminho do arquivo):
   git clone --depth 1 https://github.com/codewithMUHILAN/Lightswind-UI-Library _ref/lightswind
   git clone --depth 1 https://github.com/ruucm/shadergradient           _ref/shadergradient
   git clone --depth 1 https://github.com/WatermelonCorp/watermelon-platform _ref/watermelon
+  git clone --depth 1 https://github.com/uiverse-io/galaxy              _ref/galaxy   (opcional: 3.802 snippets CSS)
 (awesome-design-md já está vendorado no kit em .claude/skills/awesome-design-md/)
+
+PARTE A.1 — Re-verificar (contar no filesystem, pós-clone; auditoria dos totais):
+  react-bits:  for d in _ref/react-bits/src/content/*/; do echo "$d: $(ls $d|wc -l)"; done
+  cult-ui:     ls _ref/cult-ui/apps/www/registry/default/ui | wc -l
+  lightswind:  ls _ref/lightswind/Components/*.tsx | wc -l
+  watermelon:  cat _ref/watermelon/src/data/contents/components/*/index.ts | grep -cE "id: ['\"]"
+  shadcn:      ls _ref/shadcn-ui/apps/v4/registry/new-york-v4/ui | wc -l
+Compare com o censo verificado (02/07/2026) em
+  .claude/skills/component-libraries/reference/censo-verificado-2026-07.md
+(referência: react-bits 134 · cult-ui 82 · lightswind 204 · watermelon 514+131 · shadcn 61 ui + 30 blocks).
 
 PARTE B — Registries instaláveis (anote o comando, NÃO instale ainda):
   shadcn:   npx shadcn@latest add <componente>

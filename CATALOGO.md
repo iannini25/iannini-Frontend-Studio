@@ -127,16 +127,21 @@ tipografia/motion ao design system do projeto). Automação: `prompts/03-catalog
 > real, comando real). Esta seção é o registro completo, incluindo as galerias 4.2.
 
 ### 4.1 Open-source (Claude Code clona/instala direto)
-| Fonte | Como puxar | Bom para |
-|---|---|---|
-| **shadcn/ui** — `ui.shadcn.com` | `npx shadcn@latest add <componente>` · repo `github.com/shadcn-ui/ui` · blocks e charts em `/blocks` `/charts` | Base de componentes acessíveis, blocos, charts. A fundação. |
-| **React Bits** — `reactbits.dev` | repo `github.com/DavidHDev/react-bits` (clonar e estudar `showcase`) | Componentes animados/criativos React. |
-| **Cult UI** — `cult-ui.com` | repo `github.com/nolly-studio/cult-ui` (registry estilo shadcn) · docs `/docs` | Componentes e efeitos com caráter. |
-| **Watermelon UI** — `ui.watermelon.sh` | repo `github.com/WatermelonCorp/watermelon-platform` · install `/installation` | UI moderna. |
-| **Lightswind** — `lightswind.com` | repo `github.com/codewithMUHILAN/Lightswind-UI-Library` · `/components` | **3D** e componentes chamativos. |
-| **ShaderGradient** — `shadergradient.co` | repo `github.com/ruucm/shadergradient` · `npm i shadergradient` | Gradientes 3D animados (backgrounds de herói). |
-| **Skiper UI** — `skiper-ui.com` | `npx shadcn add @skiper-ui/skiper40` (registry) · `/components` | Efeitos e componentes prontos via registry. |
-| **21st.dev** — `21st.dev` | registry shadcn: `npx shadcn@latest add "https://21st.dev/r/..."` · `/community/components` `/themes` `/templates` | Efeitos, temas e templates da comunidade. |
+> **Inventário verificado (contado no filesystem) em 02/07/2026** — nomes completos por
+> categoria e comandos de re-verificação na skill `component-libraries`
+> (`reference/censo-verificado-2026-07.md`). Os totais mudam com o tempo; recontam em segundos.
+
+| Fonte | Inventário (02/07/2026) | Como puxar | Bom para |
+|---|---|---|---|
+| **shadcn/ui** — `ui.shadcn.com` | 61 ui + 30 blocks + charts + 16 estilos | `npx shadcn@latest add <componente>` · repo `github.com/shadcn-ui/ui` | Base acessível, blocks, charts. A fundação. |
+| **Watermelon UI** — `watermelon.sh` | 514 variantes (30 cat.) + 131 animated + 22 cat. de blocks + 2 dashboards | repo `github.com/WatermelonCorp/watermelon-platform` · CLI shadcn por variante (`registry.watermelon.sh/r/<nome>.json`) | **A maior em UI base + micro-interações + blocos de seção** (hero/cta/pricing/faq/testimonials). MIT. |
+| **React Bits** — `reactbits.dev` | 134 (45 bg, 36 comp, 30 anim, 23 texto) | repo `github.com/DavidHDev/react-bits` · copy-paste / jsrepo | Componentes animados/criativos. ⚠️ **MIT + Commons Clause**: usar em projeto ok; não revender como pack/biblioteca. |
+| **Cult UI** — `cult-ui.com` | 82 componentes | repo `github.com/nolly-studio/cult-ui` · `npx shadcn@latest add https://cult-ui.com/r/<nome>.json` | Componentes e efeitos com caráter. MIT. |
+| **Lightswind** — `lightswind.com` | 204 componentes + 2 templates | repo `github.com/codewithMUHILAN/Lightswind-UI-Library` · CLI própria | **3D/WebGL/scroll** e efeitos chamativos. MIT. |
+| **ShaderGradient** — `shadergradient.co` | pacote + 10 presets | repo `github.com/ruucm/shadergradient` · `npm i shadergradient @react-three/fiber three` | Gradiente 3D animado (fundo de herói). MIT. |
+| **Uiverse (galaxy)** — `github.com/uiverse-io/galaxy` | 3.802 elementos CSS/Tailwind (congelado set/2024) | clone `github.com/uiverse-io/galaxy` | Censo em massa de snippets CSS (botões/cards/loaders…). MIT. Site vivo em §4.2. |
+| **Skiper UI** — `skiper-ui.com` | registry | `npx shadcn add @skiper-ui/skiper40` (registry) · `/components` | Efeitos e componentes prontos via registry. |
+| **21st.dev** — `21st.dev` | registry comunidade | `npx shadcn@latest add "https://21st.dev/r/..."` · `/community/components` `/themes` `/templates` | Efeitos, temas e templates da comunidade. |
 
 ### 4.2 Galerias (copiar por componente do site — não são clonáveis em massa)
 | Fonte | O que tem | Como usar |

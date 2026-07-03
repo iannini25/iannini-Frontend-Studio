@@ -1,6 +1,6 @@
 ---
 name: component-libraries
-description: Catálogo de bancos de componentes open-source de alto nível (React Bits, Cult UI, Lightswind, ShaderGradient, shadcn/ui) indexado por CASO DE USO. Use SEMPRE que precisar de um componente/efeito pronto de qualidade — fundo de herói animado/WebGL, efeito de texto, card premium, navbar/dock, botão com efeito, efeito de scroll, elemento 3D, cursor customizado, galeria/carrossel, loader, bento. Diz QUAL biblioteca tem o componente, o NOME real do componente, o COMANDO real de instalação (CLI copy-paste, não import de lib) e as pegadinhas de cada uma. Regra dura: PUXAR o componente e ADAPTAR ao design system do projeto (cor, conteúdo, tipografia, motion) — nunca colar cru. Complementa scroll-cinematic (scroll/GSAP), ui-ux-pro-max (paletas/fontes) e as skills de taste (direção). Dispare em: "componente", "banco de componentes", "react bits", "cult ui", "lightswind", "shadergradient", "shadcn", "fundo de herói", "background animado", "efeito de texto", "card 3d", "efeito de scroll", "cursor", "gradiente webgl".
+description: Catálogo de bancos de componentes open-source de alto nível (React Bits, Cult UI, Lightswind, ShaderGradient, shadcn/ui, Watermelon) indexado por CASO DE USO. Use SEMPRE que precisar de um componente/efeito pronto de qualidade — fundo de herói animado/WebGL, efeito de texto, card premium, navbar/dock, botão com efeito, efeito de scroll, elemento 3D, cursor customizado, galeria/carrossel, loader, bento, bloco de seção (hero/pricing/cta/faq/testimonials). Diz QUAL biblioteca tem o componente, o NOME real do componente, o COMANDO real de instalação (CLI copy-paste, não import de lib) e as pegadinhas de cada uma. Censo verificado (contado no filesystem em 02/07/2026) em reference/censo-verificado-2026-07.md. Regra dura: PUXAR o componente e ADAPTAR ao design system do projeto (cor, conteúdo, tipografia, motion) — nunca colar cru. Complementa scroll-cinematic (scroll/GSAP), ui-ux-pro-max (paletas/fontes) e as skills de taste (direção). Dispare em: "componente", "banco de componentes", "react bits", "cult ui", "lightswind", "shadergradient", "shadcn", "watermelon", "bloco de seção", "fundo de herói", "background animado", "efeito de texto", "card 3d", "efeito de scroll", "cursor", "gradiente webgl".
 ---
 
 # component-libraries — Bancos de componentes (catálogo real)
@@ -21,15 +21,26 @@ Para clonar os repos e estudar o código-fonte localmente: `prompts/03-catalogar
 
 ## 1. As bibliotecas (o que são + como instalar — comandos reais)
 
-| Lib | Natureza | Instalação (real) | Melhor para |
+| Lib | Natureza (censo 02/07/2026) | Instalação (real) | Melhor para |
 |---|---|---|---|
-| **shadcn/ui** | Primitivos acessíveis (base) | `npx shadcn@latest add <componente>` | Fundação: button, dialog, form, table, tabs, sidebar, sonner, command… |
-| **React Bits** | 134 componentes animados/criativos | shadcn **ou** jsrepo (copy-paste). Doc: `reactbits.dev/get-started/installation` | Fundos, efeitos de texto, cards, cursores, galerias. O mais rico em "efeito". |
-| **Cult UI** | ~80 componentes com caráter (registro shadcn) | `npx shadcn@latest add https://cult-ui.com/r/<nome>.json` (ex.: `texture-card.json`) | Cards texturizados, botões premium, heros WebGL, family drawer/button, floating panel. |
-| **Lightswind** | 205 componentes, forte em **3D/WebGL/scroll** | `npx lightswind@latest init` → `npx lightswind@latest add <nome>` | 3D, backgrounds shader, efeitos de scroll, cursores, loaders. Preenche o buraco de 3D. |
-| **ShaderGradient** | Gradiente shader animado (WebGL, R3F) | `npm i @shadergradient/react three @react-three/fiber` | Fundo de herói com gradiente 3D animado, específico e lindo. |
+| **shadcn/ui** | **61** primitivos + **30** blocks + charts + 16 estilos (a base) | `npx shadcn@latest add <componente>` | Fundação: button, dialog, form, table, tabs, sidebar, sonner, command… |
+| **Watermelon** | **514** variantes de UI base (30 categorias) + **131** animated + **22** categorias de blocks + 2 dashboards | `npx shadcn@latest add https://registry.watermelon.sh/r/<nome>.json` · clone `_ref/watermelon/src/data/contents/` | **A maior em variantes de UI base e micro-interações.** Blocks de seção (hero/cta/pricing/faq/testimonials…), inputs/tabs/select em dezenas de variantes, animated components de produto/fintech. |
+| **React Bits** | **134** (45 Backgrounds, 36 Components, 30 Animations, 23 TextAnimations) | shadcn **ou** jsrepo (copy-paste). Doc: `reactbits.dev/get-started/installation` | Fundos, efeitos de texto, cards, cursores, galerias. O mais rico em "efeito". ⚠️ licença Commons Clause (ver pegadinhas). |
+| **Cult UI** | **82** componentes com caráter (registro shadcn) | `npx shadcn@latest add https://cult-ui.com/r/<nome>.json` (ex.: `texture-card.json`) | Cards texturizados, botões premium, heros WebGL, family drawer/button, floating panel. |
+| **Lightswind** | **204** componentes, forte em **3D/WebGL/scroll** | `npx lightswind@latest init` → `npx lightswind@latest add <nome>` | 3D, backgrounds shader, efeitos de scroll, cursores, loaders. Preenche o buraco de 3D. |
+| **ShaderGradient** | pacote + **10 presets** (WebGL, R3F) | `npm i shadergradient @react-three/fiber three` | Fundo de herói com gradiente 3D animado, específico e lindo. |
+
+> **Censo completo (todos os nomes, por categoria) + comandos de re-verificação:**
+> `reference/censo-verificado-2026-07.md` — cada repo clonado e **contado no filesystem** em
+> 02/07/2026. Caminhos locais dos clones: `_ref/react-bits` · `_ref/cult-ui` · `_ref/shadcn-ui`
+> · `_ref/lightswind` · `_ref/shadergradient` · `_ref/watermelon` (+ `_ref/galaxy` do Uiverse,
+> se clonado). Os totais mudam com o tempo; recontar leva segundos com os comandos do censo.
 
 **Pegadinhas reais (documentadas pelas próprias libs):**
+- **React Bits: licença MIT + Commons Clause.** Pode usar os componentes DENTRO de projetos
+  entregues a clientes (uso pretendido pela comunidade), mas **não** revenda como "seu pack/
+  biblioteca" de componentes e mantenha a atribuição. Cult UI, Lightswind, shadcn, Watermelon,
+  ShaderGradient são MIT puro. (Resumo do texto da licença, não aconselhamento jurídico.)
 - **Lightswind** e **React Bits** são **copy-paste**: NÃO envolva num Provider nem importe
   como pacote — use a CLI para instalar o arquivo no projeto e edite direto.
 - **ShaderGradient** exige `three` + `@react-three/fiber` (é R3F). Pesado — use só no herói,
@@ -43,7 +54,8 @@ Para clonar os repos e estudar o código-fonte localmente: `prompts/03-catalogar
 ## 2. Índice por CASO DE USO (nomes reais)
 
 Escolha pelo efeito que quer. `[RB]`=React Bits · `[Cult]`=Cult UI · `[LSW]`=Lightswind ·
-`[SG]`=ShaderGradient.
+`[SG]`=ShaderGradient · `[WM]`=Watermelon · `[shadcn]`=shadcn/ui. Watermelon e shadcn têm
+listas grandes por categoria — nomes completos no censo (`reference/censo-verificado-2026-07.md`).
 
 ### Fundo de herói — animado / WebGL (o "momento" visual)
 - **[RB]** Aurora · DarkVeil · Silk · Threads · Waves · Plasma · PlasmaWave · Iridescence ·
@@ -144,15 +156,39 @@ Escolha pelo efeito que quer. `[RB]`=React Bits · `[Cult]`=Cult UI · `[LSW]`=L
 - **[LSW]** canvas-confetti-cursor · sparkle-particles · particles-background · particle-orbit-effect ·
   animated-bubble-particles · meteors · globe
 
+### Blocos de seção prontos (hero, cta, pricing, faq, testimonials, footer…)
+- **[WM]** 22 categorias de blocks: announcement · auth · bento · blog · career · contact ·
+  cta · error · faq · feature · file-upload · footer · hero · integrations · navigation ·
+  newsletter · notification · pricing · stats · team · testimonials · widget (a fonte mais
+  forte para montar landing por seção; instale a variante por `registry.watermelon.sh`)
+- **[shadcn]** 30 blocks: dashboard-01 · login-01…05 · signup-01…05 · sidebar-01…16
+- Para a estrutura AIDA da landing, ver skill `gpt-taste`; aqui você pega os blocos prontos.
+
+### UI base em muitas variantes (input, select, tabs, dialog, table…)
+- **[WM]** o acervo mais profundo: button (38) · select (36) · alerts (30) · tabs (26) ·
+  calendar (25) · badge (24) · dialog (23) · avatar (21) · textarea (21) · sonner (20) ·
+  switch (18) · accordion (16) · checkbox (16) · table (16) · pagination (15) · card (15) …
+  (30 categorias, 514 variantes — nomes/números no censo)
+- **[shadcn]** os 61 primitivos acessíveis (a base). Use shadcn para a fundação, Watermelon
+  quando quiser uma variante pronta com mais caráter.
+
+### Micro-interações de produto / fintech (dashboards, wallet, forms vivos)
+- **[WM]** 131 animated: morphing-button · dialog-stack · scroll-island · gooey-menu ·
+  fluid-tabs · shimmer-button · card-swipe · revealing-cards · waveform-scrub ·
+  swap-currency-card · transaction-list · onboarding-checklist · command-search · dock …
+  (ótimo para SaaS/app; adapte tokens e conteúdo real)
+
 ---
 
 ## 3. Qual biblioteca para qual vibe (guia rápido)
 
 - **Premium/Tech (SaaS, "Apple/Linear-tier"):** Cult UI (hero-liquid-metal, texture-card,
   metal-button, family-drawer) + React Bits (Aurora/DarkVeil/Silk de fundo, SpotlightCard) +
-  shadcn (base). Combina com skill `high-end-visual-design`.
-- **Conversão/Marketing (landing):** React Bits (texto: ShinyText/GradientText/CountUp;
-  LogoLoop de prova social) + Cult UI (botões, feature-carousel). Combina com `gpt-taste`.
+  **Watermelon** (UI base em variantes + micro-interações de produto) + shadcn (base).
+  Combina com skill `high-end-visual-design`.
+- **Conversão/Marketing (landing):** **Watermelon** (blocos prontos: hero/cta/pricing/faq/
+  testimonials/stats) + React Bits (texto: ShinyText/GradientText/CountUp; LogoLoop de prova
+  social) + Cult UI (botões, feature-carousel). Combina com `gpt-taste`.
 - **Disruptivo/Awwwards:** Lightswind (shaders, 3D, CinematicScroll) + React Bits
   (Balatro/Hyperspeed/LiquidEther, cursores) + ShaderGradient. Combina com
   `industrial-brutalist-ui` ou `high-end-visual-design`.
@@ -174,6 +210,11 @@ Escolha pelo efeito que quer. `[RB]`=React Bits · `[Cult]`=Cult UI · `[LSW]`=L
 6. Passe pelo checklist da skill de estilo + `SISTEMA.md`.
 
 ## 5. Galerias que NÃO são clonáveis (copiar por componente do site)
-Uiverse, Aceternity (ao vivo), 21st.dev, Magic Pattern, Lukacho, Sprint, animmasterlib,
-Refero — não são repos clonáveis em massa; catalogadas em `CATALOGO.md` §4.2. Copie o
-componente individual do site e adapte pelas mesmas regras acima.
+Aceternity (ao vivo), 21st.dev, Magic Pattern, Lukacho, Sprint, animmasterlib, Refero — não
+são repos clonáveis em massa; catalogadas em `CATALOGO.md` §4.2. Copie o componente
+individual do site e adapte pelas mesmas regras acima.
+
+**Uiverse é caso à parte:** o site `uiverse.io` é galeria (copiar por elemento), mas existe
+um **snapshot clonável** `github.com/uiverse-io/galaxy` — **3.802** elementos CSS/Tailwind
+(MIT, congelado em set/2024). Para consulta/censo em massa, clone o galaxy; para o mais
+novo, use o site. São snippets CSS por-elemento (não componentes React) — adapte igual.
