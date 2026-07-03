@@ -12,7 +12,7 @@ O estúdio tem **5 camadas**. Um bom site passa por todas, nesta ordem:
 
 | Camada | O que decide | Skills/Agentes |
 |---|---|---|
-| **1. Direção** | público, arquétipo visual, fontes, assinatura | `design-director` (agente) → escolhe UMA skill de estilo |
+| **1. Direção** | público, arquétipo visual, fontes, assinatura | `design-foundations` (o porquê: semântica/sistema/hierarquia/redução) + `design-director` (agente) → escolhe UMA skill de estilo |
 | **2. Conhecimento** | paletas, pares de fonte, padrões, referência de marca | `ui-ux-pro-max`, `awesome-design-md` (74 marcas), `FONTES.md` |
 | **3. Build** | o código em si | skill de estilo escolhida + `image-to-code` (se partir de imagem) |
 | **4. Motion** | animação | `scroll-director`/`scroll-cinematic` (scroll/GSAP) · `anime-motion`/`animejs` (código) · `jitter/svgator/iconsax` (assets) |

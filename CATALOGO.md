@@ -17,6 +17,7 @@ Todas em `.claude/skills/<nome>/SKILL.md`. Descoberta automática pelo Claude Co
 ### Direção de design / "taste" (o núcleo — escolha UMA como base por projeto)
 | Skill | O que é | Quando usar |
 |---|---|---|
+| **design-foundations** *(novo)* | **A base teórica de todas as outras** (o PORQUÊ): Vignelli, Müller-Brockmann, Rand, Bass, Glaser, Scher, Wollner, Aloisio + ponte fundamento→tendência 2026. 4 decisões, 12 leis, diagnóstico visual e checklist. **Sempre carregada** pelo `design-director` antes da skill de estilo — não é "uma das", é a fundação. | Antes de definir grid/tokens/tipografia/hierarquia/assinatura e ao decidir estilo vs tendência. |
 | **design-taste-frontend** | Anti-slop contextual (flagship, 1206 linhas). Lê o brief e infere a direção; design systems reais; audit-first em redesign. | Landing/portfólio/redesign quando você **não** quer fixar o estilo — deixa a skill decidir. Coringa. |
 | **design-taste-frontend-v1** | A v1 original, preservada. | Só se precisar de compatibilidade exata com o comportamento antigo. |
 | **high-end-visual-design** | "$150k agency": Double-Bezel (cards aninhados), motor de variância, botão-no-botão, nav ilha de vidro, cubic-bezier custom. Bane Inter/Lucide. | SaaS/produto premium, tech, "cara de agência cara", Apple/Linear-tier. |

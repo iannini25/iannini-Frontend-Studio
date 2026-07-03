@@ -67,7 +67,7 @@ frontend-studio/
 ├── fonts-manifest.json    ← manifest das suas fontes locais (saída do prompts/02; fora do git)
 ├── fonts-woff2/           ← suas fontes convertidas p/ web (prompts/02; fora do git)
 └── .claude/
-    ├── skills/           ← 27 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
+    ├── skills/           ← 28 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
     └── agents/           ← agentes (7: director, scroll, motion, critic, copy, responsive, code)
 ```
 
@@ -82,6 +82,11 @@ a fonte única em `.claude/skills/` é o formato de distribuição.
 ---
 
 ## 3. Skills instaladas (resumo — detalhe em CATALOGO.md)
+
+**Fundamentos (NOVO):** `design-foundations` — a camada do **porquê**
+(Vignelli/Müller-Brockmann/Rand/Bass/Glaser/Scher + escola brasileira Wollner/Aloisio +
+ponte fundamento→tendência 2026). O `design-director` a carrega ANTES das skills de estilo:
+semântica → sistema → hierarquia → redução.
 
 **Direção de design / "taste" (o núcleo):**
 `design-taste-frontend` (flagship anti-slop) · `design-taste-frontend-v1` (compat) ·

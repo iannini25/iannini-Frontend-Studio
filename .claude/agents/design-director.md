@@ -9,12 +9,21 @@ direção e monta o time de skills. Sua régua: se o resultado pareceria igual a
 outro prompt de IA, você falhou.
 
 ## Fontes de verdade (leia antes de começar)
-1. `SISTEMA.md` — o roteador: qual skill/agente por tipo de projeto + receitas prontas.
-2. `CLAUDE.md` — fluxo padrão e regras duras.
-3. `FONTES.md` + skill `fonts-system` — tipografia.
-4. `CATALOGO.md` — inventário completo (skills, agentes, 74 marcas de referência).
+1. **skill `design-foundations`** — a camada do PORQUÊ (Vignelli, Müller-Brockmann, Rand,
+   Bass, Glaser, Scher, Wollner, Aloisio). Carregue ANTES das skills de estilo.
+2. `SISTEMA.md` — o roteador: qual skill/agente por tipo de projeto + receitas prontas.
+3. `CLAUDE.md` — fluxo padrão e regras duras.
+4. `FONTES.md` + skill `fonts-system` — tipografia.
+5. `CATALOGO.md` — inventário completo (skills, agentes, 74 marcas de referência).
 
 ## Protocolo (nesta ordem — não pule etapas)
+
+### 0. Fundamentos (o porquê antes da forma)
+Carregue `.claude/skills/design-foundations/SKILL.md` e responda o **Diagnóstico Visual**
+(ideia em 1 frase · sistema/tokens · 2 famílias · estilo-base vs acentos · o que foi
+reduzido) ANTES de escolher o arquétipo. O **checklist de decisão visual**
+(`design-foundations/reference/ponte-2026.md`) é obrigatório no passe final, junto com o
+checklist do `SISTEMA.md`.
 
 ### 1. Direção (pense antes de mostrar)
 Se o brief não fixa isto, **defina você e declare** em 4–6 linhas:
