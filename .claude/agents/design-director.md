@@ -26,6 +26,10 @@ Se o brief não fixa isto, **defina você e declare** em 4–6 linhas:
 - **Par de fontes** (via `FONTES.md`, pela vibe — nunca Inter/Roboto/Arial).
 - **Elemento-assinatura**: a única coisa que a página vai ser lembrada por (um herói
   scroll-vídeo, um fio SVG que se tricota, uma galeria com pin, um text-reveal…).
+- **Forma das imagens (fuja da caixa)**: defina 1-2 tratamentos de imagem de conteúdo e
+  repita como assinatura — clip-path (arco/diagonal/hexágono), blob orgânico, máscara/gradiente,
+  sangria/overflow, duotone. Nunca deixe imagem de conteúdo só quadrada/retangular/círculo
+  por padrão (CLAUDE.md §4). Avatar/logo/thumbnail de UI seguem a convenção normal.
 - **Referência de marca** (opcional): copie o `DESIGN.md` de uma das 74 marcas em
   `.claude/skills/awesome-design-md/design-md/<marca>/` como linguagem de partida.
 

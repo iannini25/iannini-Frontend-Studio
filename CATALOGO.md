@@ -187,6 +187,7 @@ tipografia/motion ao design system do projeto). Automação: `prompts/03-catalog
 - Misturar duas fontes de ícones; emoji como ícone de UI.
 - Dois motores de animação no mesmo elemento (GSAP + anime.js brigando por transform).
 - Colar componente externo cru sem adaptar ao design system.
+- Deixar imagem de conteúdo/hero só na caixa (quadrado/retângulo/círculo com raio uniforme) sem tratamento de forma — clip-path/máscara/blob/sangria/duotone (CLAUDE.md §4). Avatar/logo/thumbnail seguem a convenção.
 - Truncar output (`// ...`, "resto segue o padrão").
 - Dados falsos ("John Doe", "Acme Corp", stats inventadas) — peça o dado real ou liste a hipótese.
 

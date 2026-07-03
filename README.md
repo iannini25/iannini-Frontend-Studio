@@ -92,7 +92,8 @@ Exemplo mínimo do que dizer:
 ## Filosofia
 
 O padrão de um LLM é "página de IA": Inter como display, Lucide grosso, gradiente roxo,
-hero de 6 linhas, bento com buraco. **Tudo aqui existe para quebrar isso.** Direção antes
+hero de 6 linhas, bento com buraco, imagem sempre na caixa (quadrado/círculo).
+**Tudo aqui existe para quebrar isso.** Direção antes
 de código, uma estética por projeto, tipografia com caráter, motion com peso, mobile que
 colapsa de verdade, e a régua final: *se pareceria igual a qualquer outro prompt, está
 errado — recomece pela direção.*

@@ -143,6 +143,23 @@ no `CLAUDE.md` do projeto específico. Padrões recomendados:
   grosso, FontAwesome e Material** por padrão.
 - **Fontes.** **Nunca** Inter/Roboto/Arial/Open Sans como display. Use `fonts-system` +
   `FONTES.md`. (Regra herdada de todas as skills de taste.)
+- **Forma da imagem (fuja da caixa).** Ao inserir uma imagem de **conteúdo/hero/editorial**,
+  o default preguiçoso é deixá-la quadrada, retangular ou circular com raio uniforme — isso
+  grita "template". **Priorize moldar a imagem à composição:** `clip-path` (arco/dome,
+  corte diagonal, hexágono, chevron, paralelogramo), **blob orgânico** (`border-radius`
+  assimétrico tipo `42% 58% 55% 45%`), **máscara SVG / `mask-image`** com forma ou gradiente
+  (bordas esfumadas que fundem com o fundo), **sangria/overflow** (a imagem vaza do container
+  e quebra a caixa), rotação leve + sobreposição em outro elemento, duotone com `mix-blend`,
+  ou imagem-dentro-do-texto (`background-clip: text`) no herói.
+  - **Escolha 1-2 tratamentos por projeto e repita** (vira assinatura; formas aleatórias em
+    cada imagem = ruído). O `design-director` define essa assinatura na direção.
+  - **Não sacrifique o assunto:** o recorte não pode cortar rosto/produto de forma feia;
+    respeite a "safe area" do sujeito. Reserve espaço com `aspect-ratio` (evita CLS).
+  - **A forma tem que reflowar no mobile** (skill `responsive-design`): simplifique recortes
+    agressivos em telas estreitas; a imagem nunca pode virar uma fatia ilegível.
+  - **Exceção (mantêm a convenção):** avatares/foto de perfil (círculo), logos, thumbnails de
+    UI densa e ícones — aí quadrado/círculo é o certo. A regra é para imagem **de conteúdo**,
+    não para todo elemento.
 - **Qualidade de código.** Todo código passa por `clean-code`; antes de dar um módulo como
   pronto, varra `.claude/skills/clean-code/reference/odores.md`.
 - **Animação — qual sistema:** ícone Lottie → `iconsax-icons`; vetorial exportado do

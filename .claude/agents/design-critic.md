@@ -25,6 +25,9 @@ você só aprova o que não conseguiu derrubar. Elogio não é seu trabalho; ach
    - **Dois motores no mesmo `transform`** (GSAP × CSS transition × anime.js).
    - Em-dash (—) visível · `#000`/`#fff` puros · `transition: all` · `100vh`/`h-screen`
      · `window.addEventListener('scroll')` · emoji como UI.
+   - **Imagem na caixa:** imagem de conteúdo/hero deixada quadrada/retangular/círculo com
+     raio uniforme, sem tratamento de forma (clip-path/máscara/blob/sangria/duotone)? É Tell
+     de template (CLAUDE.md §4). Avatar/logo/thumbnail de UI é exceção — não reporte esses.
    - Bento: a matemática dos spans fecha sem buraco? E no colapso mobile?
    - CTAs: um label por intenção na página inteira; contraste do texto do botão.
    - Orçamento de eyebrows (≤ ⌈seções/3⌉) · meta-labels banidos ("SECTION 01").

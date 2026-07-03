@@ -144,6 +144,11 @@ media query / `matchMedia` (nunca deixe rodando "de graça").
   paisagem no desktop).
 - **`aspect-ratio`** + `object-fit: cover` para reservar espaço e **evitar CLS** (o pulo de
   layout quando a imagem carrega). Sempre `width`/`height` ou `aspect-ratio`.
+- **Forma da imagem tem que reflowar.** O tratamento de forma da imagem de conteúdo
+  (clip-path/máscara/blob/sangria — regra "fuja da caixa", `CLAUDE.md` §4) precisa continuar
+  bonito no mobile: simplifique recortes agressivos em telas estreitas (um arco/diagonal
+  suave sobrevive; um hexágono apertado vira fatia ilegível). A imagem nunca pode perder o
+  assunto por causa da forma.
 - **`loading="lazy"`** abaixo da dobra; herói é `eager`/`fetchpriority=high`.
 - Vídeo de fundo: `poster` sempre; no mobile prefira o poster e só carregue o vídeo se
   fizer sentido (dado/bateria).

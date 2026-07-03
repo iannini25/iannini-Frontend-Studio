@@ -164,6 +164,7 @@ projeto — nunca cole o componente cru.
 - [ ] Passou pela camada de **Direção** (não caiu no default genérico)
 - [ ] Nenhuma fonte banida (Inter/Roboto/Arial) como display; fontes via `fonts-system`
 - [ ] Uma fonte de ícones só; sem emoji de UI
+- [ ] Imagem de conteúdo/hero **com forma** (clip-path/máscara/blob/sangria/duotone), não quadrado/retângulo/círculo por default — avatar/logo/thumbnail de UI são exceção (CLAUDE.md §4)
 - [ ] Macro-whitespace (seções respirando, `py-24`+)
 - [ ] Motion só em `transform`/`opacity`; `prefers-reduced-motion` respeitado
 - [ ] Mobile **reflowa** de verdade (agente `responsive-engineer`): cards viram carrossel/2-col/lista, sem "trem de card"; `100dvh` não `100vh`; hover só em `(hover:hover)`; zero overflow-x; alvos ≥44px
