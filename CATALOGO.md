@@ -49,6 +49,11 @@ Todas em `.claude/skills/<nome>/SKILL.md`. Descoberta automática pelo Claude Co
 |---|---|---|
 | **conversion-copywriting** *(novo)* | Sistema de persuasão do estúdio: Schwartz (consciência/sofisticação), Halbert+Georgi (fome/RMBC/mecanismo), Ogilvy (headlines/fatos), Sutherland (psico-lógica/microcopy), Godin+Kotler (posicionamento), escola brasileira (voz). 7 referências + blueprint seção a seção + ponte nicho→fonte/paleta/posição. | Toda copy de venda/conversão: headline, oferta, prova, objeções, FAQ, CTA. O agente `copy-chief` executa. |
 
+### Responsividade (novo)
+| Skill | O que é | Quando usar |
+|---|---|---|
+| **responsive-design** *(novo)* | Sistema de reflow mobile (reorganizar, não encolher): catálogo de como cada seção vira no celular (cards → carrossel/2-col/lista/accordion, nunca "trem de card"), o que matar no toque (hover/parallax/pin/cursor/tilt/blur), toque ≥44px, dvh/safe-area, imagens responsivas, performance e QA em 360px. SKILL.md + `reference/recipes.md` (código copiável CSS puro + Tailwind). | Sempre no build e antes do QA; qualquer coisa de mobile/tablet/breakpoint. O agente `responsive-engineer` executa. |
+
 ### Conhecimento / base de dados
 | Skill | O que é | Quando usar |
 |---|---|---|
@@ -85,6 +90,7 @@ Em `.claude/agents/<nome>.md`. Agentes orquestram skills.
 | **scroll-director** *(novo)* | Especialista na stack GSAP/ScrollTrigger/SplitText/Lenis (skill `scroll-cinematic`). Espelho do anime-motion para a região do scroll. | Delegar qualquer efeito dirigido pela rolagem: scroll-vídeo, pin, parallax, scrub, text-reveal. |
 | **design-critic** *(novo)* | Crítico/QA adversarial: varre o build contra o checklist da skill de estilo + anti-slop + SISTEMA.md §6, computa contraste WCAG de verdade, reporta achado→arquivo:linha→fix. Executor da `impeccable`. | **Antes de dar qualquer página como pronta.** E em "revise/critique o design". |
 | **copy-chief** *(novo)* | Chefe de copy PT-BR. Executa a skill `conversion-copywriting`: diagnóstico Schwartz (consciência/sofisticação), identificação de nicho, mineração de reviews, mecanismo nomeado, blueprint seção a seção, proposta de forma (fonte/paleta/posição). Zero clichê de IA, dado real ou hipótese rotulada. | Escrever/revisar qualquer texto visível e montar a copy inteira de landing de vendas. |
+| **responsive-engineer** *(novo)* | Engenheiro de responsividade (skill `responsive-design`). Reflow seção a seção no mobile (cards → carrossel/2-col/lista/accordion), remove efeitos ruins no toque, acerta toque/dvh/safe-area/imagens, QA em 360px. | **Ao final de todo build, antes do QA;** e sempre que algo "não fica bom no celular". |
 | **clean-code-reviewer** | Guardião da qualidade de código (skill `clean-code`). Revisa por heurísticas (G/F/N), refatora em passos pequenos. | Revisar diffs/PRs, refatorar, escrever código no padrão. |
 
 ---

@@ -16,7 +16,7 @@ O estúdio tem **5 camadas**. Um bom site passa por todas, nesta ordem:
 | **2. Conhecimento** | paletas, pares de fonte, padrões, referência de marca | `ui-ux-pro-max`, `awesome-design-md` (74 marcas), `FONTES.md` |
 | **3. Build** | o código em si | skill de estilo escolhida + `image-to-code` (se partir de imagem) |
 | **4. Motion** | animação | `scroll-director`/`scroll-cinematic` (scroll/GSAP) · `anime-motion`/`animejs` (código) · `jitter/svgator/iconsax` (assets) |
-| **5. Polish + QA** | craft, crítica, código limpo, completude | `design-critic` (executa `impeccable`), `copy-chief` (textos), `redesign-existing-projects`, `clean-code`+`clean-code-reviewer`, `full-output-enforcement` |
+| **5. Polish + QA** | craft, crítica, responsividade, código limpo, completude | `responsive-engineer` (reflow mobile, skill `responsive-design`), `design-critic` (executa `impeccable`), `copy-chief` (textos), `redesign-existing-projects`, `clean-code`+`clean-code-reviewer`, `full-output-enforcement` |
 
 **Sempre ativas (transversais):** `full-output-enforcement` (nunca truncar) e
 `clean-code` (todo código).
@@ -166,7 +166,7 @@ projeto — nunca cole o componente cru.
 - [ ] Uma fonte de ícones só; sem emoji de UI
 - [ ] Macro-whitespace (seções respirando, `py-24`+)
 - [ ] Motion só em `transform`/`opacity`; `prefers-reduced-motion` respeitado
-- [ ] Mobile colapsa (assimetrias → `w-full`, `100dvh` no lugar de `100vh`)
+- [ ] Mobile **reflowa** de verdade (agente `responsive-engineer`): cards viram carrossel/2-col/lista, sem "trem de card"; `100dvh` não `100vh`; hover só em `(hover:hover)`; zero overflow-x; alvos ≥44px
 - [ ] Passou pelo checklist da skill de estilo usada
 - [ ] `clean-code` (varreu odores) + `full-output-enforcement` (arquivos inteiros)
 - [ ] Impressão final: "estúdio de ponta", não "template com fonte bonita"

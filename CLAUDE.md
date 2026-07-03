@@ -32,15 +32,17 @@ Quando o usuário pedir um site/página/componente, **não saia codando**. Siga:
    "momento cinematográfico" (1–2 no máximo).
 3. **Build.** Escreva o código já puxando as skills de taste da direção escolhida
    (ver `SISTEMA.md`). Fontes via `fonts-system` / `FONTES.md`. Ícones conforme a
-   regra de ícones do projeto (§4).
+   regra de ícones do projeto (§4). **Mobile-first** desde já (skill `responsive-design`):
+   cada seção reflowa no mobile, sem "trem de card".
 4. **Motion.** Animação orquestrada por código → agente `anime-motion` (anime.js);
    scroll-driven → agente `scroll-director` (GSAP/ScrollTrigger/Lenis) ou
    skill `scroll-cinematic` (GSAP/ScrollTrigger/Lenis/scroll-vídeo). Nunca anime o
    mesmo elemento por dois sistemas.
-5. **Polish + QA.** Rode o agente `design-critic` (executa `impeccable` + checklist da
-   skill de estilo + contraste WCAG) e/ou `redesign-existing-projects`. Textos visíveis
-   passam pelo agente `copy-chief`. Código passa por `clean-code` (+ agente
-   `clean-code-reviewer`).
+5. **Polish + QA.** Rode o agente `responsive-engineer` (reflow mobile seção a seção,
+   remove efeitos ruins no toque, QA em 360px) e o agente `design-critic` (executa
+   `impeccable` + checklist da skill de estilo + contraste WCAG) e/ou
+   `redesign-existing-projects`. Textos visíveis passam pelo agente `copy-chief`. Código
+   passa por `clean-code` (+ agente `clean-code-reviewer`).
 6. **Completude.** `full-output-enforcement` está sempre ativa: entregue arquivos
    inteiros, sem `// ...`, sem "resto segue o padrão".
 
@@ -65,8 +67,8 @@ frontend-studio/
 ├── fonts-manifest.json    ← manifest das suas fontes locais (saída do prompts/02; fora do git)
 ├── fonts-woff2/           ← suas fontes convertidas p/ web (prompts/02; fora do git)
 └── .claude/
-    ├── skills/           ← 26 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
-    └── agents/           ← agentes (6: director, scroll, motion, critic, copy, code)
+    ├── skills/           ← 27 skills + awesome-design-md (74 marcas) — FONTE ÚNICA
+    └── agents/           ← agentes (7: director, scroll, motion, critic, copy, responsive, code)
 ```
 
 **Descoberta:** o Claude Code lê skills em `.claude/skills/<nome>/SKILL.md` e agentes
@@ -105,6 +107,11 @@ adaptação (nunca colar cru).
 (Schwartz/Halbert/Ogilvy/Georgi/Sutherland/Godin/Kotler + escola brasileira:
 Olivetto, Silvio Santos, Hugo Veiga); o agente `copy-chief` executa.
 
+**Responsividade (NOVO):** `responsive-design` — reflow mobile (não encolher): catálogo de
+como cada seção vira no celular (cards → carrossel/2-col/lista/accordion, nunca "trem de
+card"), o que matar no toque (hover/parallax/pin/cursor/tilt), toque/dvh/safe-area, imagens
+e QA mobile; o agente `responsive-engineer` executa.
+
 **Processo/QA:** `impeccable` (motor de craft/crítica/polish, tem CLI própria) ·
 `redesign-existing-projects` (auditar e elevar) · `full-output-enforcement` (anti-truncamento) ·
 `ui-ux-pro-max` (base de dados pesquisável: 67 estilos, 96 paletas, 57 pares de fonte) ·
@@ -121,7 +128,7 @@ Olivetto, Silvio Santos, Hugo Veiga); o agente `copy-chief` executa.
 Copie o DESIGN.md de uma marca para o projeto e peça "faça uma página nesta linguagem".
 
 **Agentes:** `design-director` (orquestrador — NOVO) · `anime-motion` (motion anime.js) ·
-`clean-code-reviewer` (qualidade de código) · `scroll-director` (GSAP/scroll — NOVO) · `design-critic` (QA adversarial — NOVO) · `copy-chief` (copy PT-BR — NOVO).
+`clean-code-reviewer` (qualidade de código) · `scroll-director` (GSAP/scroll — NOVO) · `design-critic` (QA adversarial — NOVO) · `copy-chief` (copy PT-BR — NOVO) · `responsive-engineer` (responsividade mobile — NOVO).
 
 ---
 
