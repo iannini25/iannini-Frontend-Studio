@@ -1,8 +1,0 @@
-# Frontend Studio Kit — dependências Python
-# Instalar: pip install -r requirements.txt
-#
-# Usadas pelo pipeline de fontes (prompts/02-ingerir-minhas-fontes.md +
-# skill fonts-system): inspeção de .ttf/.otf e conversão para WOFF2.
-# Os scripts da ui-ux-pro-max usam apenas a biblioteca padrão do Python.
-fonttools>=4.60
-brotli>=1.1

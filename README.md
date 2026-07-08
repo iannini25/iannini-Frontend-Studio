@@ -1,101 +1,75 @@
-# Frontend Studio Kit
+# Portfolio — Bernardo Iannini
 
-Biblioteca reutilizável de **skills + agentes** para o **Claude Code** (VS Code) gerar
-sites e interfaces **muito acima do padrão** — profissional, minimalista, premium,
-disruptivo, landing de vendas, portfólio, SaaS ou institucional — sem cara de "site de IA".
-
-Você abre este pacote, pede o site, e o Claude Code usa toda a biblioteca (direção de
-design, técnicas de scroll cinematográfico, tipografia, 74 referências de marca, catálogo
-de componentes) para entregar algo de estúdio.
+Site estático (HTML/CSS/JS) com um blog/Newsroom gerado a partir de
+arquivos Markdown. Hospedado na **Vercel** (estático). O painel admin
+roda **só localmente**.
 
 ---
 
-## O que tem dentro
+## ⚡ Como funciona (leia isto)
 
-- **28 skills** de design, motion, tipografia, copy de conversão, componentes prontos, código e geração de imagem.
-- **7 agentes** que trabalham em conjunto (orquestrador, scroll, motion, crítica de design, copy, responsividade e qualidade de código).
-- **74 `DESIGN.md`** de marcas de ponta (Apple, Stripe, Linear, Vercel, Ferrari, Nike…).
-- **Roteador** que escolhe a combinação certa de skills por tipo de projeto.
-- **Sistema de fontes** que usa as fontes do **seu** computador + biblioteca curada.
-- **Prompts prontos** para as etapas de terminal (instalar skills, ingerir fontes,
-  catalogar componentes externos, iniciar projeto).
+- **Fonte da verdade dos posts:** `data/posts/*.md`
+- **Imagens dos posts:** `img/posts/<slug>/...`
+- O build (`npm run build:posts`) lê os `.md` e gera:
+  `blog.html`, `posts/*.html`, `data/posts.json`, `sitemap.xml`,
+  `js/blog-seed.js`.
+- A Vercel serve **só o resultado estático**. Ela **não** roda o admin.
 
----
-
-## Instalação (VS Code + Claude Code)
-
-**Opção 1 — usar como raiz do projeto (mais simples):**
-1. Descompacte e abra a pasta `frontend-studio/` no VS Code.
-2. Abra o Claude Code. Pronto — ele descobre `.claude/skills/` e `.claude/agents/` sozinho.
-
-**Opção 2 — usar em um projeto existente:**
-1. Copie para dentro do seu projeto: a pasta `.claude/`, e os arquivos de topo
-   (`CLAUDE.md`, `SISTEMA.md`, `CATALOGO.md`, `FONTES.md`), a pasta `prompts/`, o
-   `skills-lock.json` e (se for usar anime.js offline) `vendor/`.
-2. Abra o Claude Code no projeto.
-
-Sem build, sem config. A descoberta é automática: skills em `.claude/skills/<nome>/SKILL.md`,
-agentes em `.claude/agents/<nome>.md`.
+> O admin (`admin.html`) **não funciona no site no ar** — é por design.
+> Você gerencia os posts na sua máquina e dá push do resultado.
 
 ---
 
-## Dependências
+## 🖥️ Rodar / gerenciar localmente
 
-**O kit em si não precisa de instalação** — skills e agentes são markdown que o Claude
-Code lê direto. As dependências abaixo são para os fluxos opcionais:
+```bash
+npm install
+npm run admin
+```
 
-| Ferramenta | Para quê | Quando |
-|---|---|---|
-| **Python 3.10+** + `pip install -r requirements.txt` | `fonttools` + `brotli`: inspeção das suas fontes e conversão WOFF2 (`prompts/02`, skill `fonts-system`). Os scripts da `ui-ux-pro-max` usam só a stdlib. | Uma vez, antes do `prompts/02`. |
-| **Node.js 18+** | `npx skills` (reinstalar skills do lock), `npx impeccable` (CLI de polish), `npx shadcn`/`npx lightswind` (puxar componentes do catálogo). Nada para instalar antes — o `npx` baixa sob demanda. | Sob demanda. |
-| **git** | Clonar os repos de referência do `prompts/03`. | Só no `prompts/03`. |
-| **ffmpeg** *(opcional)* | Fatiar vídeo em frames para scroll-vídeo (skill `scroll-cinematic`). | Só se fizer herói com scroll-vídeo. |
+Abra **http://localhost:4000/bernardolindao.html**
+Login: `bernardolindo` · Senha: `iannini`
 
-Nos sites gerados, GSAP/Lenis entram via CDN e o anime.js já vem vendorado em
-`vendor/anime/` — nenhum `npm install` obrigatório.
+No painel você cria/edita/publica posts e anexa várias imagens
+(elas vão pro topo do post, em grade estilo LinkedIn). Cada
+ação grava o `.md`, salva as imagens e roda o build sozinho.
 
----
+Só pré-visualizar o site (sem admin):
 
-## Quickstart
-
-1. (Opcional, uma vez) rode os prompts de setup da pasta `prompts/`:
-   - `02-ingerir-minhas-fontes.md` → cataloga suas fontes locais.
-   - `03-catalogar-componentes-externos.md` → clona/registra bancos de componentes.
-2. Para criar um site, cole `prompts/04-novo-projeto.md` no Claude Code, preencha o brief,
-   e deixe o agente **design-director** conduzir.
-
-Exemplo mínimo do que dizer:
-> "Use o Frontend Studio Kit (comece pelo design-director). Quero uma **landing de vendas**
-> para um SaaS de logística B2B, tom sóbrio e premium, com um **herói cinematográfico**.
-> Stack HTML+GSAP. Aqui estão os textos reais: …"
+```bash
+npm run dev      # http://localhost:8080
+```
 
 ---
 
-## Mapa dos arquivos
+## 🚀 Publicar no ar (fluxo obrigatório)
 
-| Arquivo | Para quê |
-|---|---|
-| `CLAUDE.md` | Manual de operação (fluxo padrão + regras). **Leia primeiro.** |
-| `SISTEMA.md` | Roteador: qual skill/agente por tipo de projeto + receitas. |
-| `CATALOGO.md` | Inventário completo: skills, agentes, 74 marcas, fontes externas de componentes. |
-| `FONTES.md` | Onde ficam suas fontes por SO + biblioteca curada por estilo. |
-| `prompts/` | Prompts prontos p/ o Claude Code (setup e kickoff). |
-| `.claude/skills/` | As 28 skills (+ pack de 74 marcas). |
-| `.claude/agents/` | Os 7 agentes: design-director, scroll-director, anime-motion, design-critic, copy-chief, responsive-engineer, clean-code-reviewer. |
-| `vendor/anime/` | anime.js v4.4.1 (ground truth da skill `animejs`). |
-| `skills-lock.json` | Rastreia as skills vindas do GitHub (CLI `npx skills`). |
-| `requirements.txt` | Dependências Python do pipeline de fontes (`fonttools`, `brotli`). |
-| `showcase/` | Demo viva do kit: uma página, quatro linguagens (rode um servidor local e abra). |
+1. `npm run admin` → cria/edita o post no painel
+2. Confira em `http://localhost:4000/blog.html`
+3. Commit de **tudo** (inclui as imagens!):
+
+```bash
+git add -A
+git commit -m "post: <titulo do post>"
+git push
+```
+
+4. A Vercel publica sozinha em ~1 min.
+
+⚠️ **Nunca esqueça o `git add -A`.** Se faltar a pasta
+`img/posts/<slug>/`, o post sai sem imagem no site.
 
 ---
 
-## Filosofia
+## ☁️ Setup na Vercel (uma vez só)
 
-O padrão de um LLM é "página de IA": Inter como display, Lucide grosso, gradiente roxo,
-hero de 6 linhas, bento com buraco, imagem sempre na caixa (quadrado/círculo).
-**Tudo aqui existe para quebrar isso.** Direção antes
-de código, uma estética por projeto, tipografia com caráter, motion com peso, mobile que
-colapsa de verdade, e a régua final: *se pareceria igual a qualquer outro prompt, está
-errado — recomece pela direção.*
+1. Crie um repositório no GitHub **só desta pasta** e dê push.
+2. Na Vercel: **Add New → Project → importe esse repo**.
+3. Framework Preset: **Other** (o `vercel.json` já configura
+   `buildCommand` e `outputDirectory`).
+4. Deploy. Depois ligue o domínio `bernardoiannini.com` em
+   *Settings → Domains* (importante: o `SITE_URL` em
+   `scripts/build-posts.js` aponta pra esse domínio — canonical,
+   Open Graph e sitemap usam ele).
 
-Detalhes de tudo isso: `CLAUDE.md` → `SISTEMA.md` → `CATALOGO.md`.
+Não precisa configurar mais nada — `vercel.json` cuida do resto.
